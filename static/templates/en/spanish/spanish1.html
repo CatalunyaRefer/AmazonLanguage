@@ -1,43 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Aleman Básico</title>
-    <link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spanish courses</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="../../../img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.5s ease-out;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <h1>Amazon Learning - Curso de Español Básico</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../espanol.html">Español</a></li>
-                <li><a href="../ingles.html">Inglés</a></li>
-                <li><a href="../aleman.html">Alemán</a></li>
-                <li><a href="../frances.html">Francés</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="course-details">
-            <div class="course-info">
-                <img src="curso-basico.jpg" alt="Curso de Español Básico">
-                <h2>Curso de Español Básico</h2>
-                <p>
-                    Este curso está diseñado para principiantes que desean aprender español desde cero. 
-                    A través de 20 horas de lecciones interactivas, aprenderás las bases del idioma, 
-                    incluyendo vocabulario, gramática y conversación básica. Ideal para viajeros y 
-                    estudiantes.
-                </p>
-                <ul>
-                    <li><strong>Duración:</strong> 20 horas</li>
-                    <li><strong>Nivel:</strong> Básico</li>
-                    <li><strong>Precio:</strong> $50</li>
-                </ul>
-                <a href="#" class="btn purchase-btn">Comprar con PayPal</a>
+<body class="bg-white font-[Poppins]">
+  <header class="animate-fade-in">
+    <nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto mb-5">
+      <div class="flex items-center">
+        <h1 class="text-2xl font-bold text-blue-600">Amazon Learning</h1>
+        <ul class="hidden md:flex space-x-6 ml-10">
+          <li>
+            <a href="../spanish/spanish.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Spanish</a>
+          </li>
+          <li>
+            <a href="../english/english.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">English</a>
+          </li>
+          <li>
+            <a href="../german/german.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">German</a>
+          </li>
+          <li>
+            <a href="../french/french.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">French</a>
+          </li>
+          <li>
+            <a href="../italian/italian.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Italian</a>
+          </li>
+          <li>
+            <a href="../portuguese/portuguese.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Portuguese</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-center">
+        <div class="relative inline-block text-left">
+          <button type="button" id="language-button" class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
+            Language
+            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <div id="language-dropdown" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden">
+            <div class="py-1">
+              <a href="../../es/spanish/spanish1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Spanish</a>
+              <a href="../../ca/spanish/spanish1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Catalan</a>
+              <a href="../../en/spanish/spanish1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</a>
+              <a href="../../de/spanish/spanish1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">German</a>
+              <a href="../../fr/spanish/spanish1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">French</a>
+              <a href="../../it/spanish/spanish1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italian</a>
+              <a href="../../pt/spanish/spanish1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Portuguese</a>
             </div>
-        </section>
-    </main>
+          </div>
+        </div>
+
+        <button id="mobile-menu-button" class="ml-4 md:hidden text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="md:hidden hidden px-6 py-4">
+      <ul class="space-y-4">
+        <li>
+          <a href="../../es/spanish/spanish1.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Spanish</a>
+        </li>
+        <li>
+          <a href="../../ca/spanish/spanish1.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Catalan</a>
+        </li>
+        <li>
+          <a href="../../en/spanish/spanish1.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">English</a>
+        </li>
+        <li>
+          <a href="../../de/spanish/spanish1.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">German</a>
+        </li>
+        <li>
+          <a href="../../fr/spanish/spanish1.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">French</a>
+        </li>
+        <li>
+          <a href="../../it/spanish/spanish1.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Italian</a>
+        </li>
+        <li>
+          <a href="../../pt/spanish/spanish1.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Portuguese</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="max-w-7xl mx-auto px-4 py-8 animate-fade-in">
+    <section class="bg-white rounded-xl shadow-lg p-8 max-w-3xl mx-auto border-2 border-gray-50">
+      <div class="course-info">
+        <img src="../../../img/españa.webp" alt="Curso de Inglés Intermedio" class="w-full rounded-lg mb-6"/>
+        <h2 class="text-3xl font-bold text-blue-600 mb-4">Basic Spanish Course</h2>
+        <p class="text-gray-600 mb-6 text-lg">
+          This course is designed for beginners who want to learn Spanish from scratch. 
+          Through 20 hours of interactive lessons, you will learn the basics of the language, 
+          including vocabulary, grammar and basic conversation. Ideal for travelers and 
+          students.
+        </p>
+        <ul class="space-y-3 mb-8 text-gray-700">
+          <li class="flex items-center">
+            <strong class="w-24">Duration:</strong> 
+            <span>20 hours</span>
+          </li>
+          <li class="flex items-center">
+            <strong class="w-24">Level:</strong> 
+            <span class="text-green-500 font-bold">Basic</span>
+          </li>
+          <li class="flex items-center">
+            <strong class="w-24">Price:</strong> 
+            <span class="font-bold">$50</span>
+          </li>
+        </ul>
+        <a href="#" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors text-lg w-full text-center">
+          Buy with PayPal
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-blue-50 mt-24 py-12 animate-fade-in">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="mb-8">
+          <h3 class="text-lg font-semibold mb-4">Contact</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="mailto:contacto@tuempresa.com" class="text-gray-600 hover:text-blue-600 transition-colors">contacto@tuempresa.com</a>
+            </li>
+            <li>
+              <a href="tel:+123456789" class="text-gray-600 hover:text-blue-600 transition-colors">+123 456 789</a>
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/place/Tu+Dirección+De+Empresa" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">Tu Dirección, Ciudad</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="mb-8">
+          <h3 class="text-lg font-semibold mb-4">Policies</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="../privacy_policies.html" class="text-gray-600 hover:text-blue-600 transition-colors">Privacy policies</a>
+            </li>
+            <li>
+              <a href="../terms_and_conditions.html" class="text-gray-600 hover:text-blue-600 transition-colors">Terms and conditions</a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="mb-8">
+          <h3 class="text-lg font-semibold mb-5">Follow us</h3>
+          <div class="flex space-x-4">
+            <a href="https://facebook.com/tuempresa" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">
+              <svg class="w-9 h-9 fill-gray-600 hover:fill-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
+              </svg>
+            </a>
+            
+            <a href="https://instagram.com/tuempresa" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">
+              <svg class="w-9 h-9 fill-gray-600 hover:fill-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"></path>
+              </svg>
+            </a>
+  
+            <a href="https://twitter.com/tuempresa" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">
+              <svg class="w-9 h-9 fill-gray-600 hover:fill-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                <path d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="border-t border-gray-200 mt-8 pt-8 text-center">
+        <p class="text-sm text-gray-600">
+          &copy; 2025 Amazon Learning. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document
+      .getElementById("mobile-menu-button")
+      .addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+
+    const languageButton = document.getElementById("language-button");
+    const languageDropdown = document.getElementById("language-dropdown");
+
+    languageButton.addEventListener("click", function (event) {
+      event.stopPropagation();
+      languageDropdown.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", function (event) {
+      if (
+        !languageDropdown.classList.contains("hidden") &&
+        !languageDropdown.contains(event.target) &&
+        !languageButton.contains(event.target)
+      ) {
+        languageDropdown.classList.add("hidden");
+      }
+    });
+  </script>
 </body>
 </html>
