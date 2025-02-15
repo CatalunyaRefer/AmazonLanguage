@@ -1,82 +1,170 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Learning</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Learning - Master New Languages</title>
+  <!-- Import Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --secondary-color: #0069d9;
+      --text-color: #333;
+      --bg-gradient-start: #f8f9fa;
+      --bg-gradient-end: #e9ecef;
+    }
+
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      color: var(--text-color);
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+
+      text-align: center;
+      padding: 10rem 10rem;
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      animation: fadeIn 1s ease;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 2rem;
+      animation: fadeInDown 1s ease;
+    }
+
+    .hero {
+      opacity: 0;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      background: var(--primary-color);
+      color: white;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta-button:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .logo {
+        font-size: 2rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Amazon Learning</h1>
-        <nav>
-            <ul>
-                <li><a href="espanol.html">Español</a></li>
-                <li><a href="ingles.html">Inglés</a></li>
-                <li><a href="aleman.html">Alemán</a></li>
-                <li><a href="frances.html">Francés</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="language-cards">
-            <div class="card">
-                <img src="fotos/españa.webp" alt="Español">
-                <h2>Español</h2>
-                <p>Aprende español de manera interactiva y rápida.</p>
-                <a href="espanol.html" class="btn">Ver Cursos</a>
-            </div>
-            <div class="card">
-                <img src="fotos/inglés.webp" alt="Inglés">
-                <h2>Inglés</h2>
-                <p>Domina el inglés con nuestros cursos especializados.</p>
-                <a href="ingles.html" class="btn">Ver Cursos</a>
-            </div>
-            <div class="card">
-                <img src="fotos/aleman.webp" alt="Alemán">
-                <h2>Alemán</h2>
-                <p>Aprende alemán desde cero con los mejores instructores.</p>
-                <a href="aleman.html" class="btn">Ver Cursos</a>
-            </div>
-            <div class="card">
-                <img src="fotos/frances.png" alt="Francés">
-                <h2>Francés</h2>
-                <p>Habla francés con fluidez en poco tiempo.</p>
-                <a href="frances.html" class="btn">Ver Cursos</a>
-            </div>
-        </section>
-    </main>
+  <div class="container">
+    <div class="logo">Amazon Learning</div>
+    <div class="hero">
+      <h1>Unlock New Worlds Through Language</h1>
+      <p>
+        Start your journey to fluency with our immersive courses, expert instructors, and cutting-edge learning technology.
+      </p>
+      <a href="static/templates/en/main.html" class="cta-button">Explore Courses</a>
+    </div>
+  </div>
+
+  <script>
+    // Enhance interactivity with smooth scaling on hover
+    const ctaButton = document.querySelector('.cta-button');
+    ctaButton.addEventListener('mouseover', function () {
+      this.style.transform = 'scale(1.05)';
+    });
+    ctaButton.addEventListener('mouseout', function () {
+      this.style.transform = 'scale(1)';
+    });
+  </script>
 </body>
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-section">
-            <h3>Contacto</h3>
-            <ul>
-                <li><a href="mailto:contacto@tuempresa.com">contacto@tuempresa.com</a></li>
-                <li><a href="tel:+123456789">+123 456 789</a></li>
-                <li><a href="https://www.google.com/maps/place/Tu+Dirección+De+Empresa" target="_blank">Tu Dirección, Ciudad</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Enlaces</h3>
-            <ul>
-                <li><a href="politicaPrivacidad.html">Política de Privacidad</a></li>
-                <li><a href="terminosCondiciones.html">Términos y Condiciones</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Síguenos</h3>
-            <ul class="social-links">
-                <li><a href="https://facebook.com/tuempresa" target="_blank">Facebook</a></li>
-                <li><a href="https://twitter.com/tuempresa" target="_blank">Twitter</a></li>
-                <li><a href="https://instagram.com/tuempresa" target="_blank">Instagram</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 Amazon Learning. Todos los derechos reservados.</p>
-    </div>
-</footer>
-
 </html>
