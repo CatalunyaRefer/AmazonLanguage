@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="../../img/favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
+  <!-- Custom CSS for animations -->
   <style>
     @keyframes fadeIn {
       0% {
@@ -23,31 +24,34 @@
       animation: fadeIn 0.5s ease-out;
     }
   </style>
-
 </head>
 <body class="bg-white font-[Poppins]">
   <header class="animate-fade-in">
     <nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+      <!-- Left: Logo and Navigation Links -->
       <div class="flex items-center">
         <h1 class="text-2xl font-bold text-blue-600">Amazon Learning</h1>
+        <!-- Desktop Menu -->
         <ul class="hidden md:flex space-x-6 ml-10">
-          <li><a href="spanish/spanish.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Espanyol</a></li>
-          <li><a href="english/english.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Anglès</a></li>
-          <li><a href="german/german.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Alemany</a></li>
-          <li><a href="french/french.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Francès</a></li>
-          <li><a href="italian/italian.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Italià</a></li>
-          <li><a href="portuguese/portuguese.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Portuguès</a></li>
+          <li><a href="spanish/spanish.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Espagnol</a></li>
+          <li><a href="english/english.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Anglais</a></li>
+          <li><a href="german/german.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Allemand</a></li>
+          <li><a href="french/french.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Français</a></li>
+          <li><a href="italian/italian.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Italien</a></li>
+          <li><a href="portuguese/portuguese.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Portugais</a></li>
         </ul>
       </div>
 
+      <!-- Right: Language Dropdown & Hamburger -->
       <div class="flex items-center">
+        <!-- Language Dropdown -->
         <div class="relative inline-block text-left">
           <button
             type="button"
             id="language-button"
             class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none"
           >
-            Idioma
+          Langue
             <svg
               class="-mr-1 ml-2 h-5 w-5"
               xmlns="http://www.w3.org/2000/svg"
@@ -61,22 +65,26 @@
               />
             </svg>
           </button>
+          <!-- Dropdown menu (hidden by default) -->
           <div
             id="language-dropdown"
             class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
           >
             <div class="py-1">
-              <a href="../es/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Espanyol</a>
-              <a href="../ca/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Català</a>
-              <a href="../en/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Anglès</a>
-              <a href="../de/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Alemany</a>
-              <a href="../fr/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Francès</a>
-              <a href="../it/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italià</a>
-              <a href="../pt/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Portuguès</a>
+              <a href="../es/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Espagnol</a>
+              <a href="../en/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Anglais</a>
+              <a href="../ca/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Catalan</a>
+              <a href="../de/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Allemand</a>
+              <a href="../fr/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Français</a>
+              <a href="../it/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italien</a>
+              <a href="../pt/privacy_policies.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Portugais</a>
+
+              
             </div>
           </div>
         </div>
 
+        <!-- Hamburger Button for Mobile -->
         <button id="mobile-menu-button" class="ml-4 md:hidden text-gray-700 focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -86,12 +94,15 @@
       </div>
     </nav>
 
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden px-6 py-4">
       <ul class="space-y-4">
-        <li><a href="spanish/spanish.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Espanyol</a></li>
-        <li><a href="english/english.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Anglès</a></li>
-        <li><a href="german/german.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Alemany</a></li>
-        <li><a href="french/french.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Francès</a></li>
+        <li><a href="spanish/spanish.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Espagnol</a></li>
+        <li><a href="english/english.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Anglais</a></li>
+        <li><a href="german/german.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Allemand</a></li>
+        <li><a href="french/french.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Français</a></li>
+        <li><a href="italian/italian.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Italien</a></li>
+        <li><a href="portuguese/portuguese.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Portugais</a></li>
       </ul>
     </div>
   </header>
@@ -109,52 +120,52 @@
 
 <main class="animate-fade-in">
   <div class="max-w-7xl mx-auto px-6 py-12">
-      <h1 class="text-4xl font-bold text-gray-800 text-center mb-12">Política de Privacitat</h1>
+      <h1 class="text-4xl font-bold text-gray-800 text-center mb-12">Politique de Confidentialité</h1>
 
       <section class="privacy-policy space-y-8">
         <div>
-          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Introducció</h2>
-          <p class="text-gray-600 leading-relaxed">A la teva empresa, respectem la teva privacitat i ens comprometem a protegir la teva informació personal. Aquesta Política de Privacitat explica com recopilem, utilitzem i protegim les teves dades quan utilitzes els nostres serveis.</p>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Introduction</h2>
+          <p class="text-gray-600 leading-relaxed">Chez Votre Entreprise, nous respectons votre vie privée et nous engageons à protéger vos informations personnelles. Cette Politique de Confidentialité explique comment nous collectons, utilisons et protégeons vos données lorsque vous utilisez nos services.</p>
         </div>
 
         <div>
-          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Informació que Recopilem</h2>
-          <p class="text-gray-600 leading-relaxed">Recopilem la següent informació:</p>
-          <p class="text-gray-600 leading-relaxed">Informació personal com el nom, l'adreça de correu electrònic, el número de telèfon, etc.</p>
-          <p class="text-gray-600 leading-relaxed">Informació sobre l'ús del lloc web, com l'historial de navegació i els dispositius que utilitzes.</p>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Informations que Nous Collectons</h2>
+          <p class="text-gray-600 leading-relaxed">Nous collectons les informations suivantes :</p>
+          <p class="text-gray-600 leading-relaxed">Informations personnelles telles que le nom, l'adresse e-mail, le numéro de téléphone, etc.</p>
+          <p class="text-gray-600 leading-relaxed">Informations sur l'utilisation du site Web, telles que votre historique de navigation et les appareils que vous utilisez.</p>
         </div>
 
         <div>
-          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Ús de la Informació</h2>
-          <p class="text-gray-600 leading-relaxed">Fem servir la informació recopilada per a:</p>
-          <p class="text-gray-600 leading-relaxed">Proporcionar els nostres serveis i millorar l'experiència de l'usuari.</p>
-          <p class="text-gray-600 leading-relaxed">Enviar-te comunicacions relacionades amb els nostres serveis.</p>
-          <p class="text-gray-600 leading-relaxed">Complir amb les nostres obligacions legals.</p>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Utilisation des Informations</h2>
+          <p class="text-gray-600 leading-relaxed">Nous utilisons les informations collectées pour :</p>
+          <p class="text-gray-600 leading-relaxed">Fournir nos services et améliorer l'expérience utilisateur.</p>
+          <p class="text-gray-600 leading-relaxed">Vous envoyer des communications liées à nos services.</p>
+          <p class="text-gray-600 leading-relaxed">Respecter nos obligations légales.</p>
         </div>
 
         <div>
-          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Protecció de la Informació</h2>
-          <p class="text-gray-600 leading-relaxed">Implementem mesures de seguretat per protegir la teva informació personal contra l'accés no autoritzat, la pèrdua o l'alteració.</p>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Protection des Informations</h2>
+          <p class="text-gray-600 leading-relaxed">Nous mettons en œuvre des mesures de sécurité pour protéger vos informations personnelles contre tout accès non autorisé, perte ou altération.</p>
         </div>
 
         <div>
-          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Galetes</h2>
-          <p class="text-gray-600 leading-relaxed">Utilitzem galetes per millorar la funcionalitat del nostre lloc web. Pots configurar el teu navegador per bloquejar les galetes, però això pot afectar la teva experiència en el lloc.</p>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Cookies</h2>
+          <p class="text-gray-600 leading-relaxed">Nous utilisons des cookies pour améliorer la fonctionnalité de notre site Web. Vous pouvez configurer votre navigateur pour bloquer les cookies, mais cela peut affecter votre expérience sur le site.</p>
         </div>
 
         <div>
-          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Drets de l'Usuari</h2>
-          <p class="text-gray-600 leading-relaxed">Tens el dret d'accedir, corregir, eliminar o restringir l'ús de la teva informació personal. Si vols exercir aquests drets, contacta amb nosaltres a través del nostre correu electrònic de contacte.</p>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Droits des Utilisateurs</h2>
+          <p class="text-gray-600 leading-relaxed">Vous avez le droit d'accéder, de corriger, de supprimer ou de restreindre l'utilisation de vos informations personnelles. Si vous souhaitez exercer ces droits, veuillez nous contacter via notre adresse e-mail de contact.</p>
         </div>
 
         <div>
-          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Canvis en Aquesta Política</h2>
-          <p class="text-gray-600 leading-relaxed">Podem actualitzar aquesta Política de Privacitat en el futur. Et notificarem qualsevol canvi actualitzant la data a la part superior d'aquesta pàgina.</p>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Modifications de Cette Politique</h2>
+          <p class="text-gray-600 leading-relaxed">Nous pouvons mettre à jour cette Politique de Confidentialité à l'avenir. Nous vous informerons de tout changement en mettant à jour la date en haut de cette page.</p>
         </div>
 
         <div>
-          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contacte</h2>
-          <p class="text-gray-600 leading-relaxed">Si tens preguntes sobre la nostra Política de Privacitat, no dubtis a contactar-nos a <a href="mailto:contacto@tuempresa.com" class="text-blue-600 hover:text-blue-700 transition-colors underline">contacto@tuempresa.com</a>.</p>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contact</h2>
+          <p class="text-gray-600 leading-relaxed">Si vous avez des questions concernant notre Politique de Confidentialité, n'hésitez pas à nous contacter à <a href="mailto:contacto@tuempresa.com" class="text-blue-600 hover:text-blue-700 transition-colors underline">contacto@tuempresa.com</a>.</p>
         </div>
       </section>
   </div>
@@ -164,8 +175,9 @@
     <footer class="bg-blue-50 mt-24 py-12 animate-fade-in">
       <div class="max-w-7xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Contact Section -->
           <div class="mb-8">
-            <h3 class="text-lg font-semibold mb-4">Contactee</h3>
+            <h3 class="text-lg font-semibold mb-4">Contact</h3>
             <ul class="space-y-2">
               <li><a href="mailto:contacto@tuempresa.com" class="text-gray-600 hover:text-blue-600 transition-colors">contacto@tuempresa.com</a></li>
               <li><a href="tel:+123456789" class="text-gray-600 hover:text-blue-600 transition-colors">+123 456 789</a></li>
@@ -173,16 +185,19 @@
             </ul>
           </div>
   
+          <!-- Links Section -->
           <div class="mb-8">
-            <h3 class="text-lg font-semibold mb-4">Polítiques</h3>
+            <h3 class="text-lg font-semibold mb-4">Politiques</h3>
             <ul class="space-y-2">
-              <li><a href="privacy_policies.html" class="text-gray-600 hover:text-blue-600 transition-colors">Polítiques de privacitat</a></li>
-              <li><a href="terms_and_conditions.html" class="text-gray-600 hover:text-blue-600 transition-colors">Termes i condicions</a></li>
+              <li><a href="privacy_policies.html" class="text-gray-600 hover:text-blue-600 transition-colors">Politiques de Confidentialités</a></li>
+              <li><a href="terms_and_conditions.html" class="text-gray-600 hover:text-blue-600 transition-colors">Termes et Conditions</a></li>
             </ul>
           </div>
   
+          <!-- Social Media Section -->
           <div class="mb-8">
-            <h3 class="text-lg font-semibold mb-4">Segueix-nos</h3>
+            <h3 class="text-lg font-semibold mb-4">Suivez-nous
+            </h3>
             <div class="flex space-x-4">
               <a href="https://facebook.com/tuempresa" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">
                 <svg class="w-9 h-9 fill-gray-600 hover:fill-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -206,24 +221,28 @@
         </div>
   
         <div class="border-t border-gray-200 mt-8 pt-8 text-center">
-          <p class="text-sm text-gray-600">&copy; 2025 Amazon Learning. All rights reserved.</p>
+          <p class="text-sm text-gray-600">&copy; 2025 Amazon Learning. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
   
+    <!-- JavaScript to toggle mobile menu and language dropdown -->
     <script>
+      // Toggle Mobile Menu
       document.getElementById('mobile-menu-button').addEventListener('click', function () {
         document.getElementById('mobile-menu').classList.toggle('hidden');
       });
     
+      // Toggle Language Dropdown
       const languageButton = document.getElementById('language-button');
       const languageDropdown = document.getElementById('language-dropdown');
     
       languageButton.addEventListener('click', function (event) {
-        event.stopPropagation();
+        event.stopPropagation(); // Prevents the click from bubbling up to the document.
         languageDropdown.classList.toggle('hidden');
       });
     
+      // Hide the language dropdown when clicking outside of it.
       document.addEventListener('click', function (event) {
         if (
           !languageDropdown.classList.contains('hidden') &&
@@ -237,3 +256,4 @@
     
   </body>
   </html>
+  

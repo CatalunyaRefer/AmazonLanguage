@@ -1,90 +1,256 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos y Condiciones - Amazon Learning</title>
-    <link rel="stylesheet" href="../../styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon Learning</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="../../img/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS for animations -->
+  <style>
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.5s ease-out;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-white font-[Poppins]">
+  <header class="animate-fade-in">
+    <nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+      <!-- Left: Logo and Navigation Links -->
+      <div class="flex items-center">
+        <a href="main.html" class="text-2xl font-bold text-blue-600">Amazon Learning</a>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-6 ml-10">
+          <li><a href="spanish/spanish.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Spanish</a></li>
+          <li><a href="english/english.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">English</a></li>
+          <li><a href="german/german.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">German</a></li>
+          <li><a href="french/french.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">French</a></li>
+          <li><a href="italian/italian.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Italian</a></li>
+          <li><a href="portuguese/portuguese.html" class="text-gray-700 font-semibold hover:text-blue-600 transition-colors">Portuguese</a></li>
+        </ul>
+      </div>
 
-    <header>
-        <h1>Términos y Condiciones</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="politicaPrivacidad.html">Política de Privacidad</a></li>
-            </ul>
-        </nav>
-    </header>
+      <!-- Right: Language Dropdown & Hamburger -->
+      <div class="flex items-center">
+        <!-- Language Dropdown -->
+        <div class="relative inline-block text-left">
+          <button
+            type="button"
+            id="language-button"
+            class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none"
+          >
+            Language
+            <svg
+              class="-mr-1 ml-2 h-5 w-5"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <!-- Dropdown menu (hidden by default) -->
+          <div
+            id="language-dropdown"
+            class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
+          >
+            <div class="py-1">
+              <a href="../es/terms_and_conditions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Spanish</a>
+              <a href="../ca/terms_and_conditions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Catalan</a>
+              <a href="../en/terms_and_conditions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">English</a>
+              <a href="../de/terms_and_conditions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">German</a>
+              <a href="../fr/terms_and_conditions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">French</a>
+              <a href="../it/terms_and_conditions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Italian</a>
+              <a href="../pt/terms_and_conditions.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Portuguese</a>
 
-    <main>
-        <section class="terms-section">
-            <h2>Introducción</h2>
-            <p>Bienvenido a Tu Empresa. Al acceder a nuestros servicios, aceptas los términos y condiciones establecidos a continuación. Si no estás de acuerdo con alguna de las condiciones, te pedimos que no utilices nuestros servicios.</p>
-            <br>
-            <h2>1. Aceptación de los Términos</h2>
-            <p>Al utilizar nuestros servicios, ya sea accediendo a nuestra página web o utilizando nuestros productos, aceptas que estás vinculado a los términos y condiciones aquí descritos, así como a nuestra Política de Privacidad.</p>
-            <br>
-            <h2>2. Modificaciones de los Términos</h2>
-            <p>Tu Empresa se reserva el derecho de modificar estos términos en cualquier momento. Las modificaciones entrarán en vigencia al ser publicadas en esta página. Te recomendamos revisar periódicamente esta página para estar al tanto de las actualizaciones.</p>
-            <br>
-            <h2>3. Uso del Servicio</h2>
-            <p>El uso de nuestros servicios está destinado exclusivamente para fines legales. No puedes utilizar nuestros servicios para realizar actividades ilegales, malintencionadas, o para infringir los derechos de terceros.</p>
-            <br>
-            <h2>4. Propiedad Intelectual</h2>
-            <p>Todos los contenidos del sitio web, incluyendo textos, imágenes, logos, gráficos, y cualquier otro material, están protegidos por derechos de autor y son propiedad exclusiva de Tu Empresa. Queda prohibida la reproducción o uso no autorizado de estos contenidos.</p>
-            <br>
-            <h2>5. Responsabilidad</h2>
-            <p>Tu Empresa no será responsable por los daños, pérdidas o perjuicios derivados del uso de nuestros servicios, excepto en los casos en que la ley exija lo contrario.</p>
-            <br>
-            <h2>6. Privacidad y Protección de Datos</h2>
-            <p>Tu Empresa respeta tu privacidad. Para más detalles, por favor consulta nuestra <a href="/politica-de-privacidad.html">Política de Privacidad</a>.</p>
-            <br>
-            <h2>7. Enlaces Externos</h2>
-            <p>En nuestro sitio web pueden encontrarse enlaces a otros sitios de terceros. Estos enlaces son proporcionados para comodidad del usuario, pero no asumimos ninguna responsabilidad por el contenido o las políticas de privacidad de dichos sitios.</p>
-            <br>
-            <h2>8. Cancelación de Cuenta</h2>
-            <p>Tu Empresa se reserva el derecho de suspender o cancelar tu cuenta si consideramos que has violado estos términos y condiciones, sin previo aviso.</p>
-            <br>
-            <h2>9. Ley Aplicable</h2>
-            <p>Estos términos se regirán e interpretarán de acuerdo con las leyes del país en el que Tu Empresa opera. Cualquier disputa relacionada con los servicios estará sujeta a la jurisdicción de los tribunales de dicho país.</p>
-            <br>
-            <h2>10. Contacto</h2>
-            <p>Si tienes alguna pregunta o inquietud acerca de estos términos, puedes ponerte en contacto con nosotros a través de nuestro correo electrónico <a href="mailto:contacto@tuempresa.com">contacto@tuempresa.com</a>.</p>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Contacto</h3>
-                <ul>
-                    <li><a href="mailto:contacto@tuempresa.com">contacto@tuempresa.com</a></li>
-                    <li><a href="tel:+123456789">+123 456 789</a></li>
-                </ul>
+              
             </div>
-            <div class="footer-section">
-                <h3>Enlaces</h3>
-                <ul>
-                    <li><a href="politicaPrivacidad.html">Política de Privacidad</a></li>
-                    <li><a href="terminosCondiciones.html">Términos y Condiciones</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Síguenos</h3>
-                <ul class="social-links">
-                    <li><a href="https://facebook.com/tuempresa" target="_blank">Facebook</a></li>
-                    <li><a href="https://twitter.com/tuempresa" target="_blank">Twitter</a></li>
-                    <li><a href="https://instagram.com/tuempresa" target="_blank">Instagram</a></li>
-                </ul>
-            </div>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Amazon Learning. Todos los derechos reservados.</p>
-        </div>
-    </footer>
 
-</body>
-</html>
+        <!-- Hamburger Button for Mobile -->
+        <button id="mobile-menu-button" class="ml-4 md:hidden text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 py-4">
+      <ul class="space-y-4">
+        <li><a href="spanish/spanish.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Spanish</a></li>
+        <li><a href="english/english.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">English</a></li>
+        <li><a href="german/german.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">German</a></li>
+        <li><a href="french/french.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">French</a></li>
+        <li><a href="italian/italian.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Italian</a></li>
+        <li><a href="portuguese/portuguese.html" class="block text-gray-700 font-semibold hover:text-blue-600 transition-colors">Portuguese</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="animate-fade-in">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+      <h1 class="text-4xl font-bold text-gray-800 text-center mb-12">Terms and Conditions</h1>
+  
+      <section class="terms-section space-y-8">
+        <div>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Introduction</h2>
+          <p class="text-gray-600 leading-relaxed">Welcome to Tu Empresa. By accessing our services, you agree to the terms and conditions outlined below. If you do not agree with any of the conditions, please refrain from using our services.</p>
+        </div>
+  
+        <div>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">1. Acceptance of Terms</h2>
+          <p class="text-gray-600 leading-relaxed">By using our services, whether by accessing our website or using our products, you agree to be bound by the terms and conditions described herein, as well as our Privacy Policy.</p>
+        </div>
+  
+        <div>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">2. Modifications to the Terms</h2>
+          <p class="text-gray-600 leading-relaxed">Tu Empresa reserves the right to modify these terms at any time. Modifications will take effect once they are posted on this page. We recommend checking this page periodically to stay informed of updates.</p>
+        </div>
+  
+        <div>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">3. Use of the Service</h2>
+          <p class="text-gray-600 leading-relaxed">The use of our services is intended exclusively for lawful purposes. You may not use our services to engage in illegal, malicious activities, or to infringe the rights of third parties.</p>
+        </div>
+  
+        <div>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">4. Intellectual Property</h2>
+          <p class="text-gray-600 leading-relaxed">All content on the website, including texts, images, logos, graphics, and any other material, is protected by copyright and is the exclusive property of Tu Empresa. Reproduction or unauthorized use of this content is prohibited.</p>
+        </div>
+  
+        <div>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">5. Liability</h2>
+          <p class="text-gray-600 leading-relaxed">Tu Empresa will not be liable for any damages, losses, or harms arising from the use of our services, except where the law requires otherwise.</p>
+        </div>
+  
+        <div>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">6. Privacy and Data Protection</h2>
+          <p class="text-gray-600 leading-relaxed">Tu Empresa respects your privacy. For more details, please refer to our <a href="privacy_policies.html" class="text-blue-600 hover:text-blue-700 transition-colors underline">Privacy Policy</a>.</p>
+        </div>
+  
+        <div>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">7. External Links</h2>
+          <p class="text-gray-600 leading-relaxed">Our website may contain links to third-party sites. These links are provided for user convenience, but we do not assume any responsibility for the content or privacy policies of those sites.</p>
+        </div>
+  
+        <div>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">8. Account Cancellation</h2>
+          <p class="text-gray-600 leading-relaxed">Tu Empresa reserves the right to suspend or cancel your account if we believe you have violated these terms and conditions, without prior notice.</p>
+        </div>
+  
+        <div>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">9. Applicable Law</h2>
+          <p class="text-gray-600 leading-relaxed">These terms will be governed by and construed in accordance with the laws of the country where Tu Empresa operates. Any disputes related to the services will be subject to the jurisdiction of the courts of that country.</p>
+        </div>
+  
+        <div>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">10. Contact</h2>
+          <p class="text-gray-600 leading-relaxed">If you have any questions or concerns about these terms, you can contact us through our email address <a href="mailto:contacto@tuempresa.com" class="text-blue-600 hover:text-blue-700 transition-colors underline">contacto@tuempresa.com</a>.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+
+    <footer class="bg-blue-50 mt-24 py-12 animate-fade-in">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Contact Section -->
+            <div class="mb-8">
+              <h3 class="text-lg font-semibold mb-4">Contact</h3>
+              <ul class="space-y-2">
+                <li><a href="mailto:contacto@tuempresa.com" class="text-gray-600 hover:text-blue-600 transition-colors">contacto@tuempresa.com</a></li>
+                <li><a href="tel:+123456789" class="text-gray-600 hover:text-blue-600 transition-colors">+123 456 789</a></li>
+                <li><a href="https://www.google.com/maps/place/Tu+Dirección+De+Empresa" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">Tu Dirección, Ciudad</a></li>
+              </ul>
+            </div>
+    
+            <!-- Links Section -->
+            <div class="mb-8">
+              <h3 class="text-lg font-semibold mb-4">Policies</h3>
+              <ul class="space-y-2">
+                <li><a href="privacy_policies.html" class="text-gray-600 hover:text-blue-600 transition-colors">Privacy Policies</a></li>
+                <li><a href="terms_and_conditions.html" class="text-gray-600 hover:text-blue-600 transition-colors">Terms and Conditions</a></li>
+              </ul>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="mb-8">
+              <h3 class="text-lg font-semibold mb-4">Follow us</h3>
+              <div class="flex space-x-4">
+                <a href="https://facebook.com/tuempresa" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">
+                  <svg class="w-9 h-9 fill-gray-600 hover:fill-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
+                  </svg>
+                </a>
+                
+                <a href="https://instagram.com/tuempresa" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">
+                  <svg class="w-9 h-9 fill-gray-600 hover:fill-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"></path>
+                  </svg>
+                </a>
+    
+                <a href="https://twitter.com/tuempresa" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">
+                  <svg class="w-9 h-9 fill-gray-600 hover:fill-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <path d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="border-t border-gray-200 mt-8 pt-8 text-center">
+            <p class="text-sm text-gray-600">&copy; 2025 Amazon Learning. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    
+      <!-- JavaScript to toggle mobile menu and language dropdown -->
+      <script>
+        // Toggle Mobile Menu
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+          document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+      
+        // Toggle Language Dropdown
+        const languageButton = document.getElementById('language-button');
+        const languageDropdown = document.getElementById('language-dropdown');
+      
+        languageButton.addEventListener('click', function (event) {
+          event.stopPropagation(); // Prevents the click from bubbling up to the document.
+          languageDropdown.classList.toggle('hidden');
+        });
+      
+        // Hide the language dropdown when clicking outside of it.
+        document.addEventListener('click', function (event) {
+          if (
+            !languageDropdown.classList.contains('hidden') &&
+            !languageDropdown.contains(event.target) &&
+            !languageButton.contains(event.target)
+          ) {
+            languageDropdown.classList.add('hidden');
+          }
+        });
+      </script>
+      
+    </body>
+    </html>
